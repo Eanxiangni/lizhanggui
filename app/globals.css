@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 38% 98%;
+    --foreground: 222 39% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 39% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 39% 10%;
+    --primary: 214 88% 56%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 151 42% 93%;
+    --secondary-foreground: 160 35% 16%;
+    --muted: 210 28% 96%;
+    --muted-foreground: 220 15% 45%;
+    --accent: 154 52% 92%;
+    --accent-foreground: 160 40% 18%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 24% 90%;
+    --input: 214 24% 90%;
+    --ring: 214 88% 56%;
+    --radius: 1.2rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "SF Pro Display", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(120, 196, 255, 0.18), transparent 26%),
+      radial-gradient(circle at 88% 12%, rgba(171, 235, 210, 0.18), transparent 22%),
+      linear-gradient(180deg, #fffdf8 0%, #f7fbfb 42%, #f4f8fd 100%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Outfit", "SF Pro Display", "PingFang SC", sans-serif;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass-panel {
+    @apply border border-white/75 bg-white/72 shadow-[0_28px_90px_rgba(21,36,66,0.08)] backdrop-blur-2xl;
+  }
+
+  .section-space {
+    @apply py-18 sm:py-24 lg:py-28;
+  }
+
+  .gradient-stroke {
+    background:
+      linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)) padding-box,
+      linear-gradient(135deg, rgba(82, 153, 255, 0.28), rgba(121, 226, 185, 0.26)) border-box;
+    border: 1px solid transparent;
+  }
+}
