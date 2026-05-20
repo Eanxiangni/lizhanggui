@@ -56,12 +56,16 @@
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
-  .glass-panel {
-    @apply border border-white/75 bg-white/72 shadow-[0_28px_90px_rgba(21,36,66,0.08)] backdrop-blur-2xl;
+    .glass-panel {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 28px 90px rgba(21, 36, 66, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
   }
 
   .section-space {
-    @apply py-18 sm:py-24 lg:py-28;
+    @apply py-20 sm:py-24 lg:py-28;
   }
 
   .gradient-stroke {
